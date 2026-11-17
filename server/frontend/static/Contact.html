@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cars Dealership</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .contact-container {
+            max-width: 1000px;
+            margin: 45px auto;
+        }
+        .contact-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .contact-details {
+            padding: 25px;
+        }
+        .contact-details p {
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light"
+     style="background-color: darkturquoise;">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/">Cars Dealership</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container contact-container">
+    <h1 class="text-center mb-4">Contact Us</h1>
+
+    <p class="lead text-center mb-4">
+        We are here to help you find your perfect car.
+        Contact our team for sales, service, and general enquiries.
+    </p>
+
+    <div class="row align-items-center shadow rounded">
+        <div class="col-md-6">
+            <img src="/static/contactus.png"
+                 alt="Contact Cars Dealership"
+                 class="contact-image">
+        </div>
+
+        <div class="col-md-6 contact-details">
+            <h3>Cars Dealership</h3>
+
+            <p>
+                <strong>Address:</strong><br>
+                123 Main Street, Kansas City,<br>
+                Kansas 66101, USA
+            </p>
+
+            <p>
+                <strong>Phone:</strong><br>
+                +1-800-555-0145
+            </p>
+
+            <p>
+                <strong>Email:</strong><br>
+                support@carsdealership.com
+            </p>
+
+            <p>
+                <strong>Business Hours:</strong><br>
+                Monday – Friday: 9:00 AM – 6:00 PM<br>
+                Saturday: 10:00 AM – 4:00 PM<br>
+                Sunday: Closed
+            </p>
+
+            <p>
+                <strong>Customer Support:</strong><br>
+                sales@carsdealership.com
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
