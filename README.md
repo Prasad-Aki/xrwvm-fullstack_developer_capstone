@@ -1,23 +1,23 @@
-# Cars Dealership
+# fullstack_developer_capstone
 
 ## Repository Name
 xrwvm-fullstack_developer_capstone
 
 ## Project Name
-Cars Dealership
+fullstack_developer_capstone
 
 ## Project Description
-This project is a full-stack Cars Dealership application developed as part of the Coursera Full-Stack Development Capstone.
+A full-stack Cars Dealership application developed as part of the IBM Full-Stack Development Capstone.
 
-The application allows users to explore car dealerships, view available cars, and read and submit dealership reviews.
+The application allows users to explore car dealerships, view dealer details, register and log in, and submit dealership reviews.
 
 ## Technologies Used
 - Python
 - Django
 - JavaScript
+- React
 - Node.js
 - Express.js
-- React
 - SQLite
 - MongoDB
 - HTML
