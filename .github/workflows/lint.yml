@@ -1,0 +1,60 @@
+name: Cars Dealership Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  python-lint:
+    name: Python Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Linter
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+
+      - name: Run Linter
+        run: |
+          flake8 server/djangoapp server/djangoproj server/manage.py \
+            --count --select=E9,F63,F7,F82 \
+            --show-source --statistics
+
+  javascript-lint:
+    name: JavaScript Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Linter
+        run: npm install --global eslint@8.57.1
+
+      - name: Run Linter
+        run: |
+          eslint server/frontend/src server/database \
+            --ext .js,.jsx \
+            --no-eslintrc \
+            --env browser,node,es2021 \
+            --parser-options '{"ecmaVersion":2022,"sourceType":"module","ecmaFeatures":{"jsx":true}}' \
+            --rule 'no-unexpected-multiline:error' \
+            --rule 'no-unreachable:error' \
+            --rule 'no-constant-condition:error'
